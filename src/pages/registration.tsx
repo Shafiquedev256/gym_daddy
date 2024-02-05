@@ -3,8 +3,9 @@ import {Gender} from "../components/gender"
   
   return (
     <>
-    <h1 className="text-center text-2xl font-light font-sans py-3">What is your gender?</h1> 
-    <Gender/>
+    <div className="w-screen h-screen bg-gray-100 md:flex md:flex-col md:justify-center md:items-center"> 
+      <Gender/> 
+    </div>
     </>
     )
 } 
