@@ -1,4 +1,5 @@
-import {Header} from "./components/header"
+import {Header} from "./components/header" 
+import Register from "./pages/registration"
 
 function App() {
   
@@ -6,7 +7,7 @@ function App() {
   return (
     <>
     <Header/>
-
+    <Register/>
     </>
   )
 }
