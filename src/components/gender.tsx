@@ -4,7 +4,7 @@ export const Gender = ()=>{
   
   return(
     <>
-    <div className="bg-white h-[500px] md:w-screen">
+    <div className="bg-white h-[500px] md:w-screen hidden">
     <h1 className="text-center text-2xl font-light font-sans pt-3">What is your gender?</h1>
     <div className="font-light text-sm mb-3 text-center w-[100%]">Let us know you better!</div>
     <div className="flex flex-row justify-between items-center bg-white md:justify-evenly"> 
