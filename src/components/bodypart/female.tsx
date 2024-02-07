@@ -4,7 +4,7 @@ export const Female = ()=>{
   
   return(
     <>
-      <div className="bg-white md:h-[500px] h-screen  md:w-screen bg-white pt-6 hidden">
+      <div className="bg-white md:h-[500px] h-screen  md:w-screen bg-white pt-6">
     <h1 className="text-center text-2xl font-light font-sans py-3">What would you like to work on?</h1>
     
     <div className="flex flex-row items-center justify-between md:justify-evenly">
