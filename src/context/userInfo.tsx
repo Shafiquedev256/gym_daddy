@@ -1,10 +1,13 @@
 import {createContext,ReactNode,useState,useContext} from "react" 
+type BodyPart = {
+    part_name:string
+  }
 
 type Data = {
   gender: string,
-  bodyparts:{part:string}[],
+  bodyparts:BodyPart[],
   goal:string,
-  days:string,
+  days:number,
   name:string,
   password:string
 }
@@ -13,7 +16,7 @@ const INITIALDATA = {
   gender: "boy",
   bodyparts:[],
   goal:"",
-  days:"",
+  days:0,
   name:"",
   password:""
 } 

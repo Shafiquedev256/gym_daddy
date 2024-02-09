@@ -7,9 +7,10 @@ import {WorkoutDays} from "../components/workoutDays"
 
 
  const Register = ()=>{ 
-  const {steps,currentIndex,next} = useRegister([<Gender/>,<Male/>,<Female/>,<MainGoal/>,<WorkoutDays/>])
+  const {steps,currentIndex,next,back} = useRegister([<WorkoutDays/>,<MainGoal/>,<Gender/>,<Male/>,<Female/>])
   return (
     <>
+    <div className="" onClick={()=>back()}>Back</div>
     <div className="w-screen h-screen bg-gray-100 md:flex md:flex-col md:justify-center md:items-center"> 
       <div className="bg-white md:h-[600px] h-screen  md:w-screen bg-white pt-6 flex flex-col items-center md:justify-center">  
      {steps[currentIndex]} 

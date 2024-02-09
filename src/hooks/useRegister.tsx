@@ -7,18 +7,18 @@ const dataEl = useUserInfo().dataEl();
   const next = ()=>{ 
    
     if(dataEl.gender==="Male"){
-    return  setCurrentIndex(1)
+    return  setCurrentIndex(3)
     }else if(dataEl.gender==="Female"){
-    return  setCurrentIndex(2)
+    return  setCurrentIndex(4)
     }
     
-  setCurrentIndex(3)
+  setCurrentIndex(i=>i+1)
     
   } 
   const back = ()=>{
-    if(currentIndex>=1){
-      setCurrentIndex(i=>i-1)
-    }
+    if(currentIndex==3||currentIndex==4){
+      setCurrentIndex(2)
+    }else{setCurrentIndex(i=>i-1)}
   }
   return {
     currentIndex,
