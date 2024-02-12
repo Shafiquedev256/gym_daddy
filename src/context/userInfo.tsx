@@ -16,7 +16,7 @@ const INITIALDATA = {
   gender: "boy",
   bodyparts:[],
   goal:"",
-  days:0,
+  days:6,
   name:"",
   password:""
 } 
