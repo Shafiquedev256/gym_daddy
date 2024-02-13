@@ -1,4 +1,4 @@
-
+import {useNavigate} from "react-router-dom"
 
 type ComponentEl = {
   bg:string,
@@ -6,10 +6,11 @@ type ComponentEl = {
 }
 
 
-const Component = ({bg,part}:ComponentEl)=>{
+const Component = ({bg,part}:ComponentEl)=>{ 
+  const navigate = useNavigate()
   return(
     <>
-        <div className={`w-auto m-3 h-36 ${bg} bg-center bg-cover object-center relative rounded `}>
+        <div className={`w-auto m-3 h-36 ${bg} bg-center bg-cover object-center relative rounded `} onClick={()=>navigate(`/workout/${part}`)}>
     <div className="text-3xl text-white bg-black h-[100%] rounded bg-opacity-40 text-center flex items-center justify-center"><span>{part}</span></div>
     </div>
     </>

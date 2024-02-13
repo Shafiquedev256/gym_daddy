@@ -1,7 +1,7 @@
 import {BrowserRouter,Route,Routes} from "react-router-dom"
-import {Header} from "./components/header" 
 import Register from "./pages/registration" 
-import HomePage from "./pages/home_page"
+import HomePage from "./pages/home_page" 
+import WorkoutPage from "./pages/workoutPage"
 import {UserInfoProvider} from "./context/userInfo"
 function App() {
   
@@ -10,10 +10,10 @@ function App() {
     <> 
     <UserInfoProvider>
     <BrowserRouter> 
-        <Header/>
     <Routes> 
     <Route path="/" element={<HomePage/>}/>
-    <Route path="/register" element={<Register/>}/>
+    <Route path="/register" element={<Register/>}/> 
+    <Route path="/workout/:part" element={<WorkoutPage/>}/> 
     </Routes>
     </BrowserRouter>
     </UserInfoProvider>
