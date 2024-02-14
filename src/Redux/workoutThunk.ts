@@ -1,12 +1,12 @@
 import {createAsyncThunk,createSlice,PayloadAction} from "@reduxjs/toolkit" 
 
-type Exercise = {
+export type Exercise = {
 exercise:string,
 tool:string,
 safetyTips:string
 } 
 
-type Workouts = {
+export type Workouts = {
   chest:Exercise[],
   arms:Exercise[],
   abs:Exercise[],
@@ -28,7 +28,7 @@ const initialState:Initial = {
   
 }
 
-const getWorkouts = createAsyncThunk("fetch/workouts",()=>{
+export const getWorkouts = createAsyncThunk("fetch/workouts",()=>{
         const res = fetch("http://localhost:1234/gymdaddy/api/men/workouts").then(data => data.json());
     return res;
 }) 

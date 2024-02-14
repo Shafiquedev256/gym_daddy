@@ -5,6 +5,7 @@ type ComponentEl = {
   part:string,
 }
 
+{/*This component bellow is used down in the WorkoutMenu Component*/}
 
 const Component = ({bg,part}:ComponentEl)=>{ 
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ const Component = ({bg,part}:ComponentEl)=>{
     )
 }
 
+{/*this  component bellow uses the above Component*/}
 
 export const WorkoutMenu = ()=>{
   
@@ -29,7 +31,7 @@ export const WorkoutMenu = ()=>{
     <Component bg="bg-[url('/src/assets/abs.jpeg')]" part="Abs" /> 
     <Component bg="bg-[url('/src/assets/back.jpeg')]" part="Back" /> 
     <Component bg="bg-[url('/src/assets/legs.jpeg')]" part="Legs" />  
-    <Component bg="bg-red-500" part="Full body" /> 
+    <Component bg="bg-red-500" part="Fullbody" /> 
     </div>
     </>
     )
