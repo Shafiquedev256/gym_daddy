@@ -32,8 +32,8 @@ type Children = {
 const UserInfo = createContext<Context>({} as Context)
 
 export const UserInfoProvider = ({children}:Children)=>{ 
-  
-const [data,setData]=useState<Data>(INITIALDATA)  
+const [data,setData]=useState<Data>(INITIALDATA)   
+
 const updateData = (update:Partial<Data>)=>{
      setData({...data,...update})
    }  
