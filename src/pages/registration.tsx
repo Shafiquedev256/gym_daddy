@@ -1,13 +1,16 @@
 import {useRegister} from "../hooks/useRegister"
 import {Gender} from "../components/gender" 
-import {Male} from "../components/bodypart/male" 
-import {Female} from "../components/bodypart/female"  
+import {useNavigate} from "react-router-dom"
+import {Chosengender} from "../components/bodypart/chosenPart"  
 import {MainGoal} from "../components/maingoal"  
 import {WorkoutDays} from "../components/workoutDays" 
+import {Confirm} from "../components/confirm" 
 
 
  const Register = ()=>{ 
-  const {steps,currentIndex,next,back} = useRegister([<WorkoutDays/>,<MainGoal/>,<Gender/>,<Male/>,<Female/>])
+const navigate = useNavigate()
+  const {steps,currentIndex,next,back} = useRegister([<Gender/>,<Chosengender/>,<WorkoutDays/>,<MainGoal/>,<Confirm/>])
+    if(currentIndex===5){navigate("/",{replace: true})}
   return (
     <>
     <div className="" onClick={()=>back()}>Back</div>

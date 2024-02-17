@@ -28,11 +28,6 @@ const getPart = ((part:any)=>{
 })
  
  return {
-   chest,
-   arm,
-   abs,
-   back,
-   legs,
    getPart
  }
 }

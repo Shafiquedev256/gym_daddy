@@ -25,15 +25,18 @@ const {background} = useBackgroundimg()
     <section>
     {
      getPart(part)&& (getPart(part).map((item:Exercise)=>{
-        return(<div className=" flex flex-row-reverse  p-2 my-1 items-center justify-between ">
+        return(<>
+        <div className=" flex flex-row-reverse  p-2 my-1 items-center justify-between ">
             <WorkoutDetails workout={item}/>
     <span className="w-5/6 font-bold border-0 border-b-[1px] p-6 border-b-gray-200 ">{item.exercise}</span>
-    </div>)
+    </div>
+    </>)
       }))
     }
+    <div className="w-screen h-20"></div>
     </section>
 
-    
+   <div className="fixed bottom-0 z-30 border-0 border-t-2 p-2 flex  justify-center items-center w-screen bg-white"> <button className="bg-blue-600 rounded-full p-3 text-center text-white font-bold w-[90%] ">Start</button></div>
     </div>
     </div>
     </>
