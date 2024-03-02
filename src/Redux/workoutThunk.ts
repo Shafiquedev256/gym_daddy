@@ -1,5 +1,7 @@
 import {createAsyncThunk,createSlice,PayloadAction} from "@reduxjs/toolkit" 
 
+const server = import.meta.env.VITE_GYMDADDY_SERVER
+
 export type Exercise = {
 exercise:string,
 tool:string,
@@ -28,8 +30,9 @@ const initialState:Initial = {
   
 }
 
+
 export const getWorkouts = createAsyncThunk("fetch/workouts",()=>{
-        const res = fetch("http://localhost:1234/gymdaddy/api/men/workouts").then(data => data.json());
+        const res = fetch(server).then(data => data.json());
     return res;
 }) 
 

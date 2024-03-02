@@ -2,7 +2,8 @@ import {BrowserRouter,Route,Routes} from "react-router-dom"
 import Register from "./pages/registration" 
 import HomePage from "./pages/home_page" 
 import WorkoutPage from "./pages/workoutPage"
-import {UserInfoProvider} from "./context/userInfo"
+import {UserInfoProvider} from "./context/userInfo" 
+import {Protect} from "./context/authentication"
 function App() {
   
 
@@ -11,9 +12,9 @@ function App() {
     <UserInfoProvider>
     <BrowserRouter> 
     <Routes> 
-    <Route path="/" element={<HomePage/>}/>
+    <Route path="/" element={<Protect><HomePage/></Protect>}/>
     <Route path="/register" element={<Register/>}/> 
-    <Route path="/workout/:part" element={<WorkoutPage/>}/> 
+    <Route path="/workout/:part" element={<Protect><WorkoutPage/></Protect>}/> 
     </Routes>
     </BrowserRouter>
     </UserInfoProvider>
