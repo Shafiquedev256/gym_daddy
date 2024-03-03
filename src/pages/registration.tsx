@@ -20,11 +20,13 @@ const {dataEl} = useUserInfo();
     
   return (
     <>
-    <div className="" onClick={()=>back()}>Back</div>
+    {currentIndex>0&&(
+    <div className="" onClick={()=>back()}>Back</div>)
+    }
     <div className="w-screen h-screen bg-gray-100 md:flex md:flex-col md:justify-center md:items-center"> 
       <div className="bg-white md:h-[600px] h-screen  md:w-screen bg-white pt-6 flex flex-col items-center md:justify-center">  
      {steps[currentIndex]} 
-      <button className="bg-blue-500 p-4 text-center text-white w-56 translate-y-[-30px] rounded hover:bg-blue-600" type="button" onClick={()=>next()}>Next</button>
+      <button className="bg-blue-500 p-4 text-center text-white w-56 translate-y-[-30px] rounded hover:bg-blue-600" type="button" onClick={()=>next()}>{currentIndex===4?"Confirm":"Next"}</button>
       </div>
     </div> 
     </>
