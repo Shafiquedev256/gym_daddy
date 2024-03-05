@@ -3,7 +3,7 @@ import {useUserInfo} from "../context/userInfo"
 export const QuickReport = ()=>{
 const {dataEl} = useUserInfo(); 
   return(
-    <div className="md:flex md:flex-row md:justify-between">
+    <div className="md:flex md:flex-col md:items-center md:justify-between">
     <div className="bg-gray-100 py-5 px-4 m-4 rounded flex flex-row  justify-between items-center font-sans md:w-3/6">
     <div className="flex flex-col space-y-1 items-center">
     <span className="font-bold text-2xl my-2">0</span>
